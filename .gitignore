@@ -109,3 +109,4 @@ CHANGELOG.md
 src/test/
 out/
 .vscode
+**.vsix
