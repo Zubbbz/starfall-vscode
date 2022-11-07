@@ -102,3 +102,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+package-lock.json
+vsc-extension-quickstart.md
+CHANGELOG.md
+src/test/
+out/
+.vscode
