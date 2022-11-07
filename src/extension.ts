@@ -47,7 +47,7 @@ export function activate(context: vscode.ExtensionContext) {
 	fs.mkdirSync(WORKING_DIRECTORY);
 
 	// Get Annotations
-	axios.get("https://raw.githubusercontent.com/Zubbbz/emmyfall/generator-output/emmyfall.lua")
+	axios.get("https://raw.githubusercontent.com/yogwoggf/emmyfall/generator-output/emmyfall.lua")
 		.then(function (response) {
 			// Write Annotations
 			fs.writeFileSync(`${WORKING_DIRECTORY}annotations.lua`, response.data);
