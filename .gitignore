@@ -110,3 +110,4 @@ src/test/
 out/
 .vscode
 **.vsix
+EmmyLua/annotations.lua
