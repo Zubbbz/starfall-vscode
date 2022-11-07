@@ -47,24 +47,17 @@ export function activate(context: vscode.ExtensionContext) {
 	fs.mkdirSync(WORKING_DIRECTORY);
 
 	// Get Annotations
-	axios
-		.get(
-			"https://raw.githubusercontent.com/Zubbbz/emmyfall/generator-output/emmyfall.lua"
-		)
+	axios.get("https://raw.githubusercontent.com/Zubbbz/emmyfall/generator-output/emmyfall.lua")
 		.then(function (response) {
-			// Write annotations
-			fs.writeFileSync(`${WORKING_DIRECTORY}emmyfall.lua`, response.data);
+			// Write Annotations
+			fs.writeFileSync(`${WORKING_DIRECTORY}annotations.lua`, response.data);
 
-			// Update lua.workspace.library
+			// Update Lua.workspace.library
 			setExternalLibrary(context.extension, WORKING_DIRECTORY, true);
 
-			console.log("Starfall sumneko bindings loaded!");
-		})
-		.catch((exception) =>
-			console.log(
-				`Failed to get documentation from the repository: $(exception)`
-			)
-		);
+			console.log('StarfallEx sumneko bindings loaded');
+		}).catch((exception) => console.log(`Failed to get documentation from the repository: ${exception}`));
+
 }
 
 // This doesnt actually do anything as it's impossible to edit the config from the deactivate (and uninstall) events

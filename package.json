@@ -2,7 +2,7 @@
 	"name": "starfall",
 	"displayName": "StarfallEx",
 	"description": "Add StarfallEx support to sumneko's lua language server",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "Zubbbz",
 	"repository": "https://github.com/Zubbbz/starfall-vscode",
 	"icon": "favicon.ico",
@@ -41,6 +41,6 @@
 		"sumneko.lua"
 	],
 	"dependencies": {
-		"axios": "^1.1.3"
+		"axios": "^0.27.2"
 	}
 }
